@@ -495,24 +495,24 @@ function getPrevMonthLink(mm, yy) {
 	var mm1 = mm > 1 ? mm-1 : 12;
 	var yy1 = mm > 1 ? yy : yy-1;
 	//return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'"><img src="left1.gif" width=8 height=12 alt="PrevMonth" border=0></a>';
-	return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'">[+]</a>';
+	return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'">◄</a>';
 }
 
 function getNextMonthLink(mm, yy) {
 	var mm1 = mm < 12 ? mm+1 : 1;
 	var yy1 = mm < 12 ? yy : yy+1;
 	//return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'"><img src="right1.gif" width=8 height=12 alt="NextMonth" border=0></a>';
-	return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'">[-]</a>';
+	return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'">►</a>';
 }
 
 function getPrevYearLink(mm, yy) {
 	//return '<a href="'+window.location.pathname+'?yy='+(yy-1)+'&mm='+mm+'"><img src="left2.gif" width=16 height=12 alt="PrevYear" border=0></a>';
-	return '<a href="'+window.location.pathname+'?yy='+(yy-1)+'&mm='+mm+'"><<<</a>';
+	return '<a href="'+window.location.pathname+'?yy='+(yy-1)+'&mm='+mm+'"><<</a>';
 }
 
 function getNextYearLink(mm, yy) {
 	//return '<a href="'+window.location.pathname+'?yy='+(yy+1)+'&mm='+mm+'"><img src="right2.gif" width=16 height=12 alt="NextYear" border=0></a>';
-	return '<a href="'+window.location.pathname+'?yy='+(yy+1)+'&mm='+mm+'"> >>></a>';
+	return '<a href="'+window.location.pathname+'?yy='+(yy+1)+'&mm='+mm+'"> >></a>';
 }
 
 function printHead(mm, yy) {
@@ -581,7 +581,7 @@ function printFoot() {
 
 function showMonthSelect() {
 	//var home = window.location.pathname+'?yy='+(today.getFullYear())+'&mm='+today.getMonth()+';
-	window.open(window.location.pathname+'?yy='+(today.getFullYear())+'&mm='+(today.getMonth()+1), "win2702", "menubar=yes,scrollbars=yes,status=yes,toolbar=yes,resizable=yes,location=yes");
+ window.location.replace(window.location.pathname+'?yy='+(today.getFullYear())+'&mm='+(today.getMonth()+1), "win2702", "menubar=yes,scrollbars=yes,status=yes,toolbar=yes,resizable=yes,location=yes");
 	//window.location = home;
 	//alertAbout();
 }
