@@ -471,7 +471,7 @@ function printTable(mm, yy) {
 	var MonthHead = mm + "/" + yy;
 	var LunarHead = getYearCanChi(ld1.year);
 	var res = "";
-	res += ('<table class="thang" border="2" cellpadding="1" cellspacing="1" width="'+PRINT_OPTS.tableWidth+'">\n');
+	res += ('<table class="thang highlight" border="2" cellpadding="1" cellspacing="1" width="'+PRINT_OPTS.tableWidth+'">\n');
 	res += printHead(mm, yy);
 	for (i = 0; i < 6; i++) {
 		res += ("<tr>\n");
@@ -495,24 +495,24 @@ function getPrevMonthLink(mm, yy) {
 	var mm1 = mm > 1 ? mm-1 : 12;
 	var yy1 = mm > 1 ? yy : yy-1;
 	//return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'"><img src="left1.gif" width=8 height=12 alt="PrevMonth" border=0></a>';
-	return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'">◄</a>';
+	return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'">Tháng trước</a>';
 }
 
 function getNextMonthLink(mm, yy) {
 	var mm1 = mm < 12 ? mm+1 : 1;
 	var yy1 = mm < 12 ? yy : yy+1;
 	//return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'"><img src="right1.gif" width=8 height=12 alt="NextMonth" border=0></a>';
-	return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'">►</a>';
+	return '<a href="'+window.location.pathname+'?yy='+yy1+'&mm='+mm1+'">Tháng sau</a>';
 }
 
 function getPrevYearLink(mm, yy) {
 	//return '<a href="'+window.location.pathname+'?yy='+(yy-1)+'&mm='+mm+'"><img src="left2.gif" width=16 height=12 alt="PrevYear" border=0></a>';
-	return '<a href="'+window.location.pathname+'?yy='+(yy-1)+'&mm='+mm+'"><<</a>';
+	return '<a href="'+window.location.pathname+'?yy='+(yy-1)+'&mm='+mm+'">Năm trước</a>';
 }
 
 function getNextYearLink(mm, yy) {
 	//return '<a href="'+window.location.pathname+'?yy='+(yy+1)+'&mm='+mm+'"><img src="right2.gif" width=16 height=12 alt="NextYear" border=0></a>';
-	return '<a href="'+window.location.pathname+'?yy='+(yy+1)+'&mm='+mm+'"> >></a>';
+	return '<a href="'+window.location.pathname+'?yy='+(yy+1)+'&mm='+mm+'">Năm sau</a>';
 }
 
 function printHead(mm, yy) {
