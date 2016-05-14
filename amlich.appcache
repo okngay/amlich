@@ -2,4 +2,4 @@ CACHE MANIFEST
 /amlich-hnd.js
 /materialize.min.css
 FALLBACK:
-/index.html
+/html/ /offline.html
