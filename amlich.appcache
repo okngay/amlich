@@ -1,5 +1,6 @@
 CACHE MANIFEST
 amlich-hnd.js
 materialize.min.css
-
+FALLBACK:
+/html/ /offline.html
 
