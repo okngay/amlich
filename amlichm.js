@@ -604,7 +604,7 @@ function alertDayInfo(dd, mm, yy, leap, jd, sday, smonth, syear) {
 	s += "\nGi\u1EDD \u0111\u1EA7u ng\u00E0y: "+getCanHour0(jd)+" "+CHI[0];
 	s += "\nTi\u1EBFt: "+TIETKHI[getSunLongitude(jd+1, 7.0)];
 	s += "\nGi\u1EDD ho\u00E0ng \u0111\u1EA1o: "+getGioHoangDao(jd);
-	alert(s);
+	swal(s);
 }
 
 function alertAbout() {
